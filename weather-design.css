@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-font-size: 8.5rem;
+    --secondary-font-size: 1.5rem;
+    --third-font-size: 1.35rem;
+    --fourth-font-size: 0.85rem;
+    --fifth-font-size: 1rem;
+    --primary-background-color: rgb(51, 49, 49);
+    --primary-color: rgb(243, 239, 239);
+    --secondary-color: rgb(251, 254, 255);
+}
+
+body {
+    /* margin-left: 1%; */
+    background-color: rgb(0, 0, 0);
+}
+
+.container1 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 100%;
+}
+
+.container2 {
+    height: 23vh;
+    width: 100%;
+}
+
+.container3 {
+    height: 17vh;
+    width: 100%;
+}
+
+
+/* - -------------Heading starts---------------  */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+}
+
+.search-bar {
+    display: flex;
+    width: 17rem;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: rgba(48, 111, 194, 0.4);
+    border-radius: 15px;
+}
+
+.search-icon {
+    margin-top: 0.3rem;
+    height: 1.7rem;
+    border-bottom: 1px solid rgb(20, 20, 20);
+}
+
+.search-icon:hover {
+    cursor: pointer;
+}
+
+::placeholder {
+    color: var(--secondary-color);
+}
+
+#search-bar-text {
+    padding: 0 0.6rem;
+    width: 12rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgb(20, 20, 20);
+    color: var(--secondary-color);
+    letter-spacing: 2px;
+}
+
+#search-bar-text:focus {
+    outline: none;
+}
+
+.message {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgba(63, 59, 59, 0.5);
+}
+
+.message .message-text {
+    color: rgb(255, 0, 0);
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-left: 0.6rem;
+}
+
+.no-message {
+    display: none;
+}
+
+
+/* - -------------Heading ends---------------  */
+
+
+/* - -------------Upper-mid starts---------------  */
+
+.upper-mid,
+.current-temp,
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper-mid {
+    height: 85%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(95, 91, 91, 0.1), rgba(45, 45, 46, 0.8));
+}
+
+.current-temp,
+.icons {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.no-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.current-temp-up {
+    width: 100%;
+}
+
+.degrees {
+    text-align: right;
+    width: 100%;
+    margin-bottom: -3rem;
+    z-index: 1000;
+}
+
+.fah,
+.cel,
+.mid-line {
+    font-size: var(--third-font-size);
+    color: var(--primary-color);
+}
+
+.fah {
+    border-right: 1px solid white;
+    padding: 0 0.5rem;
+}
+
+.fah:hover,
+.cel:hover {
+    cursor: pointer;
+}
+
+.active-degree {
+    color: rgb(37, 108, 201);
+}
+
+.current-temp-number {
+    font-size: var(--primary-font-size);
+    font-weight: 500;
+    color: var(--primary-color);
+    text-align: center;
+    /* line-height: 18rem; */
+}
+
+.name-of-place-full,
+.icon-description {
+    font-size: var(--third-font-size);
+    color: var(--primary-color);
+    font-weight: 300;
+}
+
+.icon-image img {
+    height: 11rem;
+    width: 10rem;
+}
+
+.icon-description {
+    margin-top: 1.5rem;
+}
+
+
+/* - -------------Upper-mid ends---------------  */
+
+
+/* - -------------Middle starts---------------  */
+
+.middle-section {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(48, 111, 194);
+    align-items: center;
+}
+
+.max-temp,
+.min-temp {
+    width: 85%;
+    border-right: 1px solid black;
+}
+
+.feels-like {
+    width: 100%;
+    border-right: 1px solid black;
+}
+
+.wind-speed {
+    width: 100%;
+}
+
+.max-temp-number,
+.min-temp-number,
+.feels-like-number,
+.wind-speed-number {
+    font-size: var(--secondary-font-size);
+    text-align: center;
+}
+
+.wind-speed-number {
+    margin-bottom: -1rem;
+}
+
+.max-temp-text,
+.min-temp-text,
+.feels-like-text,
+.wind-speed-text {
+    font-size: var(--fourth-font-size);
+    font-weight: 400;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+/* - -------------Middle ends---------------  */
+
+
+/* - ------------Bottom section starts---------------  */
+
+.bottom {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(211, 211, 211);
+    height: 100%;
+    width: 100%;
+}
+
+.humidity,
+.visibility {
+    width: 100%;
+}
+
+.humidity-text,
+.visibility-text {
+    font-size: var(--third-font-size);
+    font-weight: 500;
+    text-align: center;
+}
+
+.humidity-text {
+    border-right: 1px solid;
+}
+
+.humidity-number,
+.visibility-number {
+    font-size: var(--fifth-font-size);
+    font-weight: 200;
+    text-align: center;
+}
+
+.humidity-number {
+    border-right: 1px solid;
+}
+
+
+/* - ------------Bottom section ends---------------  */
+
+
+/* Media Query starts */
+
+@media screen and (max-width:415px),
+screen and (max-height:840px) {
+    .search-bar {
+        width: 18rem;
+        padding: 0.9rem;
+    }
+    .search-icon {
+        height: 2rem;
+        width: 100%;
+        border-bottom: 1px solid rgb(20, 20, 20);
+    }
+    #search-bar-text {
+        padding: 0 0.9rem;
+        width: 18rem;
+        font-size: 0.9rem;
+    }
+    .current-temp-number {
+        font-size: 6rem;
+        line-height: 12rem;
+    }
+    .icon-image img {
+        height: 9rem;
+        width: 10rem;
+    }
+    .name-of-place-full,
+    .icon-description {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+    . .max-temp-number,
+    .min-temp-number,
+    .feels-like-number,
+    .wind-speed-number,
+    .humidity-text,
+    .visibility-text {
+        font-size: 1.6rem;
+    }
+    .max-temp-text,
+    .min-temp-text,
+    .feels-like-text,
+    .wind-speed-text {
+        font-size: 0.9rem;
+        margin-top: 0.9rem;
+    }
+    .wind-speed-number {
+        margin-bottom: -1.5rem;
+    }
+    .humidity-number,
+    .visibility-number {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+}
+
+
+/* 
+@media screen and (max-width :770px) and (max-height:1030px) {
+    .search-bar {
+        width: 20rem;
+        padding: 1rem;
+    }
+    .search-icon {
+        height: 2rem;
+        width: 100%;
+        border-bottom: 1px solid rgb(20, 20, 20);
+    }
+    #search-bar-text {
+        padding: 0 0.9rem;
+        width: 19rem;
+        font-size: 1rem;
+    }
+    .current-temp-number {
+        font-size: 11rem;
+        line-height: 13rem;
+    }
+    .icon-image img {
+        height: 12rem;
+        width: 13rem;
+        margin-top: 2rem;
+    }
+    .name-of-place-full,
+    .icon-description {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    .icon-description {
+        margin-top: -0.5rem
+    }
+    .max-temp-number,
+    .min-temp-number,
+    .feels-like-number,
+    .wind-speed-number,
+    .humidity-text,
+    .visibility-text {
+        font-size: 2.5rem;
+    }
+    .max-temp-text,
+    .min-temp-text,
+    .feels-like-text,
+    .wind-speed-text {
+        font-size: 1.5rem;
+        margin-top: 2.5rem;
+    }
+    .wind-speed-number {
+        margin-bottom: -2rem;
+    }
+    .humidity-number,
+    .visibility-number {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+} */
+
+
+/* 
+@media screen and (min-width :768px),
+screen and (min-height:1030px) {
+    .current-temp-number {
+        font-size: 12rem;
+        line-height: 20rem;
+    }
+    .icon-image {
+        height: 20rem;
+        width: 15rem;
+        margin-top: 1rem;
+    }
+    .name-of-place-full,
+    .icon-description {
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+    .icon-description {
+        margin-top: -3rem;
+        padding-top: 0.5rem;
+    }
+    .search-bar {
+        width: 20rem;
+        padding: 0.9rem;
+    }
+    .search-icon {
+        height: 87%;
+        width: 100%;
+        border-bottom: 1px solid rgb(20, 20, 20);
+    }
+    #search-bar-text {
+        padding: 0 0.9rem;
+        width: 18rem;
+        font-size: 1.5rem;
+    }
+    .max-temp-number,
+    .min-temp-number,
+    .feels-like-number,
+    .wind-speed-number {
+        font-size: 2.6rem;
+    }
+    .max-temp-text,
+    .min-temp-text,
+    .feels-like-text,
+    .wind-speed-text {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+    .wind-speed-number {
+        margin-bottom: -1.5rem;
+    }
+    .humidity-text,
+    .visibility-text {
+        font-size: 2.6rem;
+    }
+    .humidity-number,
+    .visibility-number {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width :1020px),
+screen and (min-height:1360px) {
+    .current-temp-number {
+        font-size: 16rem;
+        line-height: 22rem;
+    }
+    .icon-image {
+        height: 22rem;
+        width: 17rem;
+        margin-top: 1rem;
+    }
+    .name-of-place-full,
+    .icon-description {
+        font-size: 2.2rem;
+        font-weight: 300;
+    }
+    .icon-description {
+        margin-top: -3rem;
+        padding-top: 0.5rem;
+    }
+    .search-bar {
+        width: 24rem;
+        padding: 0.9rem;
+    }
+    .search-icon {
+        height: 87%;
+        width: 100%;
+        border-bottom: 1px solid rgb(20, 20, 20);
+    }
+    #search-bar-text {
+        padding: 0 0.9rem;
+        width: 20rem;
+        font-size: 1.6rem;
+    }
+    .max-temp-number,
+    .min-temp-number,
+    .feels-like-number,
+    .wind-speed-number {
+        font-size: 3.2rem;
+    }
+    .max-temp-text,
+    .min-temp-text,
+    .feels-like-text,
+    .wind-speed-text {
+        font-size: 2.2rem;
+        margin-top: 2.5rem;
+    }
+    .wind-speed-number {
+        margin-bottom: -2.5rem;
+    }
+    .humidity-text,
+    .visibility-text {
+        font-size: 3.2rem;
+    }
+    .humidity-number,
+    .visibility-number {
+        font-size: 2.2rem;
+        font-weight: 400;
+    }
+} */
+
+
+/* Media Query ends */

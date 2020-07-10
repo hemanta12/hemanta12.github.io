@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your weather</title>
+    <link rel="stylesheet" href="weather-design.css">
+    <!-- <link rel="stylesheet" href="./css/css-circular-prog-bar.css"> -->
+    <link rel="stylesheet" type="text/css" href="./css/loading-bar.min.css" />
+</head>
+
+<body>
+    <div class="container1">
+
+        <!-- -------------Heading starts--------------- -->
+        <div class="header">
+            <div class="search-bar">
+                <img class="search-icon" src="./icons/search-white-18dp.svg">
+                <input id="search-bar-text" type="text" autocomplete="off" placeholder="Search for a city..." />
+            </div>
+            <div class="message no-message">
+                <img class="error-icon" src="./icons/error_outline-white-18dp.svg">
+                <h4 class="message-text">No City entered!</h4>
+            </div>
+        </div>
+        <!-- -------------Heading ends--------------- -->
+
+        <!-- -------------Upper-mid session starts--------------- -->
+
+
+        <div class="upper-mid">
+            <div class="current-temp">
+                <div class="no-text">
+                    <div class="degrees">
+                        <span class="fah active-degree">&#730F</span>
+                        <span class="cel">&#730C</span>
+                    </div>
+                    <div class="current-temp-up">
+                        <h1 class="current-temp-number"></h1>
+                    </div>
+
+                </div>
+                <div class="name-of-place">
+                    <h4 class="name-of-place-full"></h4>
+                </div>
+            </div>
+            <div class="icons">
+                <div class="icon-image"></div>
+                <div class="icon-description"></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- -------------Upper-mid session ends--------------- -->
+
+    <!-- -------------Middle session starts--------------- -->
+    <section>
+        <div class="container2">
+            <div class="middle-section">
+                <div class="max-temp">
+                    <h3 class="max-temp-number"></h3>
+                    <h4 class="max-temp-text">Max</h4>
+                </div>
+                <div class="min-temp">
+                    <h3 class="min-temp-number"></h3>
+                    <h4 class="min-temp-text">Min</h4>
+                </div>
+
+                <div class="feels-like">
+                    <h3 class="feels-like-number"></h3>
+                    <h4 class="feels-like-text">Feels-Like</h4>
+                </div>
+                <div class="wind-speed">
+                    <h3 class="wind-speed-number"></h3>
+                    <h4 class="wind-speed-text">Wind-speed</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------Middle session ends--------------- -->
+
+    <div class="container3">
+        <!-- -------------Bottom session starts--------------- -->
+        <section class="bottom">
+            <div class="humidity">
+                <h4 class="humidity-text">Humidity</h4>
+                <h5 class="humidity-number"></h5>
+            </div>
+
+            <div class="visibility">
+                <h4 class="visibility-text">Visibility</h4>
+                <h5 class="visibility-number"></h5>
+            </div>
+        </section>
+        <!-- -------------Bottom session starts--------------- -->
+
+    </div>
+    <!-- <script type="text/javascript" src="./css/loading-bar.min.js"></script> -->
+    <script src="weather-looks.js"></script>
+</body>
+
+</html>
