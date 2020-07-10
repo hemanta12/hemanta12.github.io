@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
 
     // The api used
     let apiID = `575324418d03a4a82d9b0e5727371f84`;
-    let api1 = `http://api.openweathermap.org/data/2.5/weather?appid=${apiID}`;
+    let api1 = `api.openweathermap.org/data/2.5/weather?appid=${apiID}`;
 
     let userCity = '';
     //getting the latitude and longitude value from the user's browser/device
